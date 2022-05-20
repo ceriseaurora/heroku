@@ -111,7 +111,7 @@ export default {
 ```js
 export default {
     async fetch(request, env) {
-		let url = new URL(request.url);	
+	let url = new URL(request.url);	
         url.hostname=env.REACT_APP_FORM_HOSTNAME;
         url.pathname=env.REACT_APP_FORM_PATH;
         url.search=env.REACT_APP_FORM_SEARCH;
