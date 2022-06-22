@@ -33,3 +33,29 @@
     "stack": "container"
 }
 
+{
+    "name": "",
+    "description": "",
+    "keywords": [""],
+    "env": {
+        "ID": {
+            "description": "UUID",
+            "value": "c3f0db91-93b8-59f0-82b2-b69f10798e0e"
+        },
+        "WSPATH": {
+            "description": "WSPATH",
+            "value": "/ws"
+        },
+        "PASSWORD": {
+            "description": "PASSWORD",
+            "value": "password"
+        },
+        "GRPCPATH":{
+            "description": "GRPCPATH",
+            "value": "grpc"
+        }
+    },
+    "website": "",
+    "repository": "",
+    "stack": "container"
+}
