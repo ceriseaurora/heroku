@@ -8,6 +8,7 @@ install -m 755 /tmp/xray/xray /usr/local/bin/xray
 
 # Remove temporary directory
 rm -rf /tmp/xray
+
 # xray new configuration
 install -d /usr/local/etc/xray
 cat << EOF > /usr/local/etc/xray/config.json
@@ -20,7 +21,8 @@ cat << EOF > /usr/local/etc/xray/config.json
           "8.8.8.8",
           "8.8.4.4",
           "localhost"
-        ],
+        ]
+    },
     "inbounds": [
         {
             "port": ${PORT},
@@ -29,11 +31,17 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "clients": [
                     {
                       "id": "${id}",
-                      "alterId": 0
+                      "alterId": 0,
                     }
                   ]
-            }
-          },
+            },
+            "streamSettings": {
+                "network": "ws",
+                "wsSettings": {
+                    "path": "${path}"
+                }
+          }
+        },
         {
             "port": ${PORT},
             "protocol": "trojan",
@@ -44,43 +52,41 @@ cat << EOF > /usr/local/etc/xray/config.json
                       "flow": "xtls-rprx-direct"
                     }
                   ]
-            }
-        },
-        {
-            "port": ${PORT},
-            "protocol": "vless",
-            "settings": {
-                "clients": [
-                    {
-                      "id": "5783a3e7-e373-51cd-8642-c83782b807c5",
-                      "level": 0,
-                      "flow": "xtls-rprx-direct"
-                    }
-                  ],
-                  "decryption": "none"
-            }
-        }
-    ],
-        "transport": {
-          "wsSettings": {
-            "path": ""
-          },
-          "quicSettings": {
-            "security": "none",
-            "header": {
-                "type": "none"
-              }
-          },
-          "grpcSettings": {
-            "serviceName": ""
+            },
+            "streamSettings": {
+                "network": "ws",
+                "wsSettings": {
+                    "path": "${path}"
+                }
           }
         },
+        {
+        "port": ${PORT},
+        "protocol": "vless",
+        "settings": {
+            "clients": [
+                {
+                  "id": "${UUID}",
+                  "level": 0,
+
+                  "flow": "xtls-rprx-direct"
+                }
+              ],
+              "decryption": "none"
+        },
+        "streamSettings": {
+            "network": "ws",
+            "wsSettings": {
+                "path": "${path}"
+            }
+        }
+        }
+    ],
     "outbounds": [
         {
             "protocol": "Freedom"
         }
     ]
-}
 }
 EOF
 
