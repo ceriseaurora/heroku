@@ -5,15 +5,6 @@
 
 
 
-### 变量
-
-对部署时需设定的变量名称做如下说明。
-
-| 变量 | 默认值 | 说明 |
-| :--- | :--- | :--- |
-| `ID` | `cf27d8a9-bb7a-44b9-8bd8-88c1ddc5e09b` | VMess 用户主 ID，用于身份验证，为 UUID 格式 |
-| `WSPATH` | `/` | WebSocket 所使用的 HTTP 协议路径 |
-
 ### CloudFlare Workers反代代码
 <details>
 <summary>CloudFlare Workers单账户反代代码</summary>
