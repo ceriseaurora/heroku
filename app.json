@@ -1,39 +1,4 @@
 {
-    "name": "heroku",
-    "description": "heroku",
-    "keywords": ["heroku"],
-    "env": {
-        "id": {
-            "description": "id",
-            "value": "668858d1-2283-8ba9-9731-f331b8837a62"
-        },
-        "password": {
-            "description": "password",
-            "value": "Clown123"
-        },
-        "path": {
-            "description": "path",
-            "value": "/"
-        },
-        "TZ": {
-            "description": "TZ",
-            "value": "Asia/Shanghai"
-        },
-        "net.core.default_qdisc": {
-            "description": "BBR",
-            "value": "fq"
-        },
-        "net.ipv4.tcp_congestion_control": {
-            "description": "BBR",
-            "value": "bbr"
-        }
-    },
-    "website": "",
-    "repository": "",
-    "stack": "container"
-}
-
-{
     "name": "",
     "description": "",
     "keywords": [""],
