@@ -14,9 +14,10 @@
         "path": {
             "description": "path",
             "value": "/"
-        },
+        }
+    },
     "website": "",
     "repository": "",
     "stack": "container"
-    }
 }
+
