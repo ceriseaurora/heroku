@@ -3,24 +3,20 @@
     "description": "",
     "keywords": [""],
     "env": {
-        "ID": {
-            "description": "UUID",
-            "value": "c3f0db91-93b8-59f0-82b2-b69f10798e0e"
+        "id": {
+            "description": "id",
+            "value": "668858d1-2283-8ba9-9731-f331b8837a62"
         },
-        "WSPATH": {
-            "description": "WSPATH",
-            "value": "/ws"
+        "password": {
+            "description": "password",
+            "value": "Clown123"
         },
-        "PASSWORD": {
-            "description": "PASSWORD",
-            "value": "password"
+        "path": {
+            "description": "path",
+            "value": "/"
         },
-        "GRPCPATH":{
-            "description": "GRPCPATH",
-            "value": "grpc"
-        }
-    },
     "website": "",
     "repository": "",
     "stack": "container"
 }
+
